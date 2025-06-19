@@ -19,7 +19,7 @@ Output ONLY in format "x, x", indicating the number of major and minor errors as
 
 _openai_models = ['gpt-4', 'gpt-3.5-turbo', 'gpt-4o', 'gpt-4o-mini']
 
-_all_ = ['get_gemba_scores', 'get_ea_prompt_scores', 'get_sacrebleu', 'evaluate_sentence']
+_all_ = ['get_gemba_scores', 'get_ea_prompt_scores', 'get_sacrebleu', 'evaluate']
 
 
 #Add source, reference and target sentence to prompt
