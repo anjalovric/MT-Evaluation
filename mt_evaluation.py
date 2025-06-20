@@ -19,7 +19,7 @@ Output ONLY in format "x, x", indicating the number of major and minor errors as
 
 _openai_models = ['gpt-4', 'gpt-3.5-turbo', 'gpt-4o', 'gpt-4o-mini']
 
-_all_ = ['get_gemba_scores', 'get_ea_prompt_scores', 'get_sacrebleu', 'evaluate']
+_all_ = ['get_gemba_scores', 'get_ea_prompt_scores', 'get_sacrebleu', 'evaluate_sentence']
 
 
 #Add source, reference and target sentence to prompt
@@ -128,7 +128,7 @@ def _call_openai(client, prompts, model, temperature = 0.7):
 
 
 #sacrebleu
-def get_sacrebleu(reference_sentences, candidate_sentences, tok):
+def get_sacrebleu(reference_sentences, candidate_sentences, tok = 'none'):
 
     if len(reference_sentences) != len(candidate_sentences):
         raise ValueError("Error: The number of reference and candidate sentences must be equal.")
